@@ -17,4 +17,4 @@ jobs:
           aws-region: us-east-2
       - name: Sync files to S3 bucket
         run: |
-         aws s3 sync build desktop_App_new/*://http://mydivinebucket29.s3-website.eu-west-2.amazonaws.com/
+         aws s3 sync build desktop_App_new/*://mydivinebucket29.s3-website.eu-west-2.amazonaws.com/
