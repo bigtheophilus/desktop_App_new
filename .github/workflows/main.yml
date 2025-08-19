@@ -16,4 +16,4 @@ jobs:
           aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
           aws-region: us-east-2
       - name: Sync files to S3 bucket
-        run: aws s3 s3://mydivinebucket29 --region eu-west-2
+        run: aws s3 cp desktop_App_new s3://mydivinebucket29 --region eu-west-2
