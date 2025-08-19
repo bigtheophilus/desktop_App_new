@@ -1,4 +1,4 @@
-name: Push to S3
+name: website
 
 on: [push]
 
@@ -16,4 +16,4 @@ jobs:
           aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
           aws-region: us-east-2
       - name: Sync files to S3 bucket
-        run: aws s3 cp Push to S3 s3://mydivinebucket29 --region eu-west-2
+        run: aws s3 cp website s3://mydivinebucket29 --region eu-west-2
