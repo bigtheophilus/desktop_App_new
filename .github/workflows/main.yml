@@ -16,4 +16,4 @@ jobs:
           aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
           aws-region: us-east-2
       - name: Sync files to S3 bucket
-        run: aws s3 sync build s3://* --delete
+        run: aws s3/buckets/mydivinebucket29  --delete
