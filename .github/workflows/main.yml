@@ -19,5 +19,11 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-west-2'   # optional: defaults to us-east-1
         SOURCE_DIR: 'public'      # optional: defaults to entire repository
-        name: Deploy to S3
-        run: arn:aws:s3:::mydivinebucket29
+    - name: Install dependencies
+      run: yarn install
+    - name: Run Lint
+      run: yarn run lint
+    - name: Build
+      run: yarn run build
+    - name: Deploy to S3
+      run: arn:aws:s3:::mydivinebucket29
